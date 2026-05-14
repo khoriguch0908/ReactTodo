@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  align-container: center;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9ecef;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* optional wrapper if you add it in JSX: <div className="todo-page"> ... */
+.todo-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.todo-container {
+  width: min(520px, 100%);
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.todo-container h1 {
+  text-align: center;
+  color: #222;
+  margin: 0 0 1.25rem;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+form input {
+  flex: 1;
+  padding: 0.85rem;
+  font-size: 1rem;
+  border: 1px solid #cfd4da;
+  border-radius: 10px;
+  outline: none;
+}
+
+form button {
+  padding: 0.85rem 1.1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #2e7d32;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 0.9rem;
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.todo-list li span {
+  cursor: pointer;
+}
+
+.todo-list li button {
+  background: transparent;
+  border: none;
+  color: #e53935;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+}
