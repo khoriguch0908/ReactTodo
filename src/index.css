@@ -1,5 +1,64 @@
-* {
+html, body, #root {
+  background-color: white;
+  color: black;
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+}
+
+.home {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.create_form input {
+  width: 300px;
+  padding: 10px;
+  boarder-bottom: 2px solid;
+  outline: none;
+}
+.create_form button {
+padding: 10px;
+background-color: black;
+color: white;
+cursor: pointer;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: 0.5rem auto;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: black;
+  margin-top: 2px;
+  padding: 2px 5px 2px 5px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.checkbox.icon {
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.checkbox p {
+  margin: 0;   /* <p> has default margins that push it onto its own line */
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.task div span {
+  margin: 0px 5px 0px 4px
+}
+
+.task div .icon {
+ cursor: pointer;
 }
