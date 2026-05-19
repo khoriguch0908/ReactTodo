@@ -31,32 +31,29 @@ const handleDelete = (id) => {
     .catch(console.error)
 }
 
-  return (
-<div style={{ textAlign: 'center' }}>
-  <h2>Todo List</h2>
-  <Create onTodoAdded={fetchTodos} />
-  {todos.length === 0 ? (
-    <div>No Record</div>
-  ) : (
-    todos.map((todo) => (
-<div key={todo._id} className="task">
-<div className="checkbox" onClick={() => handleEdit(todo._id)}>
-  {todo.done
-    ? <BsCheckCircleFill className="icon" />
-    : <BsCircleFill className="icon" />}
-<p className={todo.done && "line_through"}>{todo.task}</p>
-
-</div>
-  <div>
-    <span onClick={() => handleDelete(todo._id)}>
-      <BsFillTrashFill className="icon" />
-    </span>
+return (
+  <div className="card">
+    <h2>To-Do List</h2>
+    <Create onTodoAdded={fetchTodos} />
+    {todos.length === 0 ? (
+      <div style={{ textAlign: 'center', color: '#888' }}>No Record</div>
+    ) : (
+      todos.map((todo) => (
+        <div key={todo._id} className="task">
+          <div className="checkbox" onClick={() => handleEdit(todo._id)}>
+            {todo.done
+              ? <BsCheckCircleFill className="icon" style={{ color: '#4caf50' }} />
+              : <BsCircleFill className="icon" />}
+            <p className={todo.done ? "line_through" : ""}>{todo.task}</p>
+          </div>
+          <span onClick={() => handleDelete(todo._id)}>
+            <BsFillTrashFill className="icon" />
+          </span>
+        </div>
+      ))
+    )}
   </div>
-</div>
-    ))
-  )}
-</div>
-  )
+)
 }
 
 export default Home

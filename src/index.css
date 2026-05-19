@@ -1,39 +1,68 @@
-html, body, #root {
-  background-color: white;
-  color: black;
-  min-height: 100vh;
+body {
   margin: 0;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5rem;
 }
 
-.home {
-display: flex;
-flex-direction: column;
-align-items: center;
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem 2.5rem;
+  width: 100%;
+  max-width: 500px;
 }
-.create_form input {
-  width: 300px;
-  padding: 10px;
-  boarder-bottom: 2px solid;
+
+.card h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
   outline: none;
 }
-.create_form button {
-padding: 10px;
-background-color: black;
-color: white;
-cursor: pointer;
+
+.input-row input:focus {
+  border-color: #4caf50;
+}
+
+.input-row button {
+  background-color: #4caf50;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  cursor: pointer;
+}
+
+.input-row button:hover {
+  background-color: #43a047;
 }
 
 .task {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 500px;
-  margin: 0.5rem auto;
-  padding: 0.5rem 1rem;
-  background-color: white;
-  color: black;
-  margin-top: 2px;
-  padding: 2px 5px 2px 5px;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #eee;
 }
 
 .checkbox {
@@ -42,29 +71,17 @@ cursor: pointer;
   gap: 0.75rem;
 }
 
-.checkbox.icon {
-  margin-right: 5px;
-  font-size: 15px;
-}
-
 .checkbox p {
-  margin: 0;   /* <p> has default margins that push it onto its own line */
+  margin: 0;
 }
 
 .icon {
-  color: black;
-
+  font-size: 1.25rem;
   cursor: pointer;
+  color: #555;
 }
 
 .line_through {
   text-decoration: line-through;
-}
-
-.task div span {
-  margin: 0px 5px 0px 4px
-}
-
-.task div .icon {
- cursor: pointer;
+  color: #999;
 }
