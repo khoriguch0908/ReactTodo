@@ -52,7 +52,13 @@ cursor: pointer;
 }
 
 .icon {
+  color: black;
+
   cursor: pointer;
+}
+
+.line_through {
+  text-decoration: line-through;
 }
 
 .task div span {
