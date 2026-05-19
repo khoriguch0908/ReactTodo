@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './ToDoApp.css'
 import { FaDeleteLeft } from 'react-icons/fa6'
 
+
 const ToDoApp = () => {
   const [todos, setTodos] = useState([])
   const [input, setInput] = useState('')

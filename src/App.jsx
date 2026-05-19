@@ -1,10 +1,10 @@
 import React from 'react'
-import ToDoApp from './ToDoApp/ToDoApp'
+import Home from './Home'
 
 const App = () => {
   return (
     <div>
-      <ToDoApp />
+      <Home />
     </div>
   )
 }
